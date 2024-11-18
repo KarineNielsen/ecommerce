@@ -5,112 +5,102 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Wire & Wear Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
-    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="ecommerce.css">
+  <script src="ecommerce.js"></script>
 </head>
 
-<body>
+<body data-category="all">
   <header>
     <!-- NAVBAR -->
     <nav class="topnav">
-      <div class="img-gadgets">
+      <div class="img-banner">
       </div>
-
       <div class="menu">
-        <img class="logo" src="images/logo.webp" alt="Wire store's logo">
+        <div class="logo-container">
+          <a href="ecommerce.html"><img class="logo" src="images/logo.webp" alt="Wire and wear store's logo"></a>
+        </div>
         <ul>
-          <li><a href="#home"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="ecommerce.html"><i class="fa-solid fa-house"></i>Home</a></li>
           <li><a href="#shop"><i class="fa-solid fa-bag-shopping"></i>Shop</a></li>
           <li><a href="mailto:contact@wireandwear.com"><i class="fa-solid fa-envelope"></i>Contact</a></li>
-          <li><a href="#cart"><i class="fa-solid fa-cart-shopping"></i>Basket</a></li>
+          <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart (<span id="cart-count">0</span>)</a></li>
         </ul>
       </div>
-
       <h1 class="slogan">Gadgets, Gear, and Style — All in One</h1>
       <div class="search-container">
         <input class="search-bar" type="search" placeholder="Search" name="search">
-        <!-- <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button> -->
+        <button class="search-button" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
       </div>
     </nav>
   </header>
 
   <main>
-    <!-- SECTION 1: PRODUCTS -->
-    <section id="shop" class="products">
-      <hr>
-      <h1 class="products-heading">Gadgets</h1>
-      <hr>
-      <div class="gadgets">
+    <!-- SECTION 1: HERO -->
+    <section id="categories" class="categories">
+      <h1 class="heading">Product Categories</h1>
+      <div class="prod-cat">
         <ul>
-          <li><img src="images/mouse.webp" alt="computer mouse">
-            <h1>Wired Optical Mouse <br>3200 DPI - Black</h1>
-            <p>kr.49,95</p>
-            <p>Wired mouse with optical sensor <br>and silent click and roll.</p>
-            <button class="add">Add to basket</button>
+          <li><a href="clothing.html"><button class="but-cat"><i class="fa-solid fa-shirt"></i><br>Clothing</button></a>
           </li>
-          <li><img src="images/keyboard.webp" alt="computer keyboard">
-            <h1>Wireless Mini Keyboard<br>Blue and White</h1>
-            <p>kr. 162,99</p>
-            <p>Compact keyboard in blue and white color,<br> equipped with a wireless 2.4 GHz connection.
-            </p>
-            <button class="add">Add to basket</button>
-          </li>
-          <li><img src="images/headphones.webp" alt="white headphones">
-            <h1>Wireless Headphones<br> White</h1>
-            <p>kr.194,00</p>
-            <p>Over-ear headphones with built-in<br>microphone. Provide up to 20h of battery life.</p>
-            <button class="add">Add to basket</button>
-          </li>
+          <li><a href="electronics.html"><button class="but-cat"><i
+                  class="fa-solid fa-computer"></i><br>Electronics</button></a></li>
         </ul>
       </div>
-      <div class="clothing">
-        <hr>
-        <h1 class="products-heading">Clothing</h1>
-        <hr>
-        <ul>
-          <li><img class="hat" src="images/hat.webp" alt="beach hat">
-            <h1>Hat</h1>
-            <p>kr.99,95</p>
-            <p>Hat in braided straw with an indented<br> crown and wide colored ribbon.
-            </p>
-            <button class="add">Add to basket</button>
-          </li>
-          <li><img class="shorts" src="images/shorts.webp" alt="jean shorts">
-            <h1>Jean Shorts</h1>
-            <p>kr.229,49</p>
-            <p>Ripped jean shorts with rolled hem.<br>Made from high quality denim.
-            </p>
-            <button class="add">Add to basket</button>
-          </li>
-          <li><img class="tshirt" src="images/tshirt.webp" alt="white t-shirt">
-            <h1>White T-Shirt</h1>
-            <p>kr.63,00</p>
-            <p>Classic white T-shirt with short sleeves, <br>round neck and small design on the chest.</p>
-            <button class="add">Add to basket</button>
-          </li>
-        </ul>
+    </section>
+
+    <!-- SECTION 2: BANNER 1 -->
+    <section id="banner-help" class="banner-help">
+      <div class="img-help">
+      </div>
+      <div class="banner-text">
+        <h2>Wire&Wear Support</h2>
+        <p>Get help with the use and repair of all kinds of electronics</p>
+        <button class="learn">Learn More</button>
+      </div>
+    </section>
+
+    <!-- SECTION 3: PRODUCTS -->
+    <section id="shop" class="products">
+      <h1 class="products-heading">Popular Products</h1>
+      <div class="sort-container">
+        <select id="sort-options" class="sort">
+          <option value="name">Sort by name</option>
+          <option value="price">Sort by price</option>
+        </select>
+      </div>
+      <div id="product-list" class="product-container">
+      </div>
+    </section>
+
+    <!-- SECTION 4: BANNER 2 -->
+    <section id="banner-return" class="banner-return">
+      <div class="img-return">
+      </div>
+      <div class="text-return">
+        <h2>30 days return policy<br>on all clothing items</h2>
+        <button class="learn">Learn More</button>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <nav class="footer">
+  <footer class="footer">
+    <div class="connect-container">
       <a href="#top" class="top">Back to the top</a>
-      <p>&copy; 2024 Wire & Wear</p>
-      <div class="connect-container">
-        <div class="icons">
-          <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
-          <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
-          <a href="https://www.linkedin.com/" target="_blank" class="fa-brands fa-linkedin"></a>
-          <a href="mailto:contact@wireandwear.com" class="fa-solid fa-envelope"></a>
-        </div>
+      <a href="about.html" class="top">About us</a>
+      <div class="icons">
+        <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
+        <a href="https://www.tiktok.com/" target="_blank" class="fa-brands fa-tiktok"></a>
+        <a href="https://www.youtube.com/" target="_blank" class="fa-brands fa-youtube"></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="fa-brands fa-linkedin"></a>
+        <a href="mailto:contact@wireandwear.com" class="fa-solid fa-envelope"></a>
       </div>
-    </nav>
+    </div>
+    <p>&copy; 2024 Wire & Wear | All rights reserved</p>
   </footer>
 </body>
 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wire & Wear Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="ecommerce.css">
+  <script src="ecommerce.js"></script>
+</head>
+
+<body data-category="electronics">
+  <header>
+
+    <!-- NAVBAR -->
+    <nav class="topnav">
+      <div class="menu">
+        <div class="logo-container">
+          <a href="ecommerce.html"><img class="logo" src="images/logo.webp" alt="Wire and wear store's logo"></a>
+        </div>
+        <ul>
+          <li><a href="ecommerce.html"><i class="fa-solid fa-house"></i>Home</a></li>
+          <li><a href="#electronics"><i class="fa-solid fa-bag-shopping"></i>Shop</a></li>
+          <li><a href="mailto:contact@wireandwear.com"><i class="fa-solid fa-envelope"></i>Contact</a></li>
+          <li><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i>Cart (<span id="cart-count">0</span>)</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SECTION 1: PRODUCTS -->
+    <section id="shop" class="products">
+      <h1 class="products-heading">Electronics</h1>
+      <div class="sort-container">
+        <select id="sort-options" class="sort">
+          <option class="opt-sort" value="name">Sort by Name</option>
+          <option class="opt-sort" value="price">Sort by Price</option>
+        </select>
+      </div>
+      <div id="product-list" class="product-container">
+      </div>
+    </section>
+
+    <!-- SECTION 2: BANNER -->
+    <section id="banner-help" class="banner-help">
+      <div class="img-help">
+      </div>
+      <div class="banner-text">
+        <h2>Wire&Wear Support</h2>
+        <p>Get help with the use and repair of all kinds of electronics</p>
+        <button class="learn">Learn More</button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="connect-container">
+      <a href="#top" class="top">Back to the top</a>
+      <a href="about.html" class="top">About us</a>
+      <div class="icons">
+        <a href="https://www.facebook.com/" target="_blank" class="fa-brands fa-facebook"></a>
+        <a href="https://www.instagram.com/" target="_blank" class="fa-brands fa-instagram"></a>
+        <a href="https://www.tiktok.com/" target="_blank" class="fa-brands fa-tiktok"></a>
+        <a href="https://www.youtube.com/" target="_blank" class="fa-brands fa-youtube"></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="fa-brands fa-linkedin"></a>
+        <a href="mailto:contact@wireandwear.com" class="fa-solid fa-envelope"></a>
+      </div>
+    </div>
+    <p>&copy; 2024 Wire & Wear | All rights reserved</p>
+  </footer>
+</body>
+
+</html>
